@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureMind</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero2">
+        <nav>
+            <a href="index.html"><img src="images/logo2.png" class="logo"></a>
+            <ul>
+                <li><a href="usuario.html" id="navUsuario">USUARIO</a></li>
+                <li><a href="profesionales.html">PROFESIONALES</a></li>
+                <li><a href="consultas.html">ARTICULOS PROFESIONALES</a></li>
+                <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="user-profile-hero">
+        <div class="user-profile-wrapper">
+            <div class="user-profile-info">
+                <p class="user-profile-label">Profesional PureMind</p>
+                <h1>Hola! <span id="nombreProfesional"></span></h1>
+                <p class="user-profile-text">
+                    Bienvenido a tu espacio profesional en PureMind.
+                    <br></br>
+                    Desde aquí podrás gestionar tu información, acceder a tus consultas y formar 
+                    parte de una comunidad comprometida con la salud mental y el acompañamiento 
+                    terapéutico de calidad.
+                    <br></br>
+                    En PureMind valoramos tu experiencia, tu enfoque clínico y tu compromiso ético. 
+                    Este perfil está pensado para facilitar tu trabajo, ofrecer visibilidad a tu 
+                    labor profesional y ayudarte a conectar con las personas que necesitan apoyo 
+                    psicológico en un entorno seguro, humano y basado en la evidencia científica.
+                </p>
+            </div>
+
+            <div class="user-profile-avatar">
+                <div class="user-profile-avatar-circle">
+                    <img src="/images/perfil.png" alt="Foto de perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="consultas">
+        <h2>AGENDA</h2>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="calendar">
+            <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">december 2015</div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+                <div>Dom</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mie</div>
+                <div>Jue</div>
+                <div>Vie</div>
+                <div>Sáb</div>
+            </div>
+            <div class="days"></div>
+            <div class="goto-today">
+                <div class="goto">
+                <input type="text" placeholder="mm/yyyy" class="date-input" />
+                <button class="goto-btn">Ir</button>
+                </div>
+                <button class="today-btn">Hoy</button>
+            </div>
+            </div>
+        </div>
+      <div class="right">
+            <div class="today-date">
+                <div class="event-day">Mie</div>
+                <div class="event-date">12th december 2025</div>
+            </div>
+            <div class="events"></div>
+            <div class="add-event-wrapper">
+                <div class="add-event-header">
+                    <div class="title">Añadir evento</div>
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Nombre del evento" class="event-name" />
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora de inicio" class="event-time-from"/>
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Hora de finalización" class="event-time-to"/>
+                    </div>
+                </div>
+                <div class="add-event-footer">
+                    <button class="add-event-btn">Añadir evento</button>
+                </div>
+            </div>
+      </div>
+      <button class="add-event">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+    <script src="js/calendar.js"></script>
+
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="/images/logo-white.png" class="logo-footer">
+                <p>En PureMind creemos que cuidar tu mente es tan importante como cuidar tu cuerpo. 
+                    Encuentra apoyo, recursos y herramientas para tu bienestar mental.</p>
+            </div>
+            <div class="col">
+                <h3>Información <div class="underline"><span></span></div></h3>
+                <p>Cornellà de Llobregat</p>
+                <p>08940</p>
+                <p class="email-id">puremind@gmail.com</p>
+                <h4>+34 123 456 789</h4>
+            </div>
+            <div class="col">
+                <h3>Enlaces <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="usuario.html">Usuario</a></li>
+                    <li><a href="profesionales.html">Profesionales</a></li>
+                    <li><a href="consultas.html">Articulos Profesionales</a></li>
+                    <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class='bx  bx-envelope' style='color:#ffffff'></i> 
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <button type="submit"><i class='bx  bx-send' style='color:#ffffff'></i> </button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Universitat Oberta de Catalunya ©</p>
+    </footer>
+    <script>
+        const loggedIn = sessionStorage.getItem("loggedIn") === "true";
+        const userType = sessionStorage.getItem("userType");
+        const username = sessionStorage.getItem("username");
+
+        if (!loggedIn || userType !== "profesional") {
+            window.location.href = "login2.html";
+        }
+
+        if (username) {
+            document.getElementById("nombreProfesional").textContent = username;
+        }
+    </script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
